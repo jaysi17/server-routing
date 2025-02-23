@@ -1,0 +1,283 @@
+/* MOBILE FIRST */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    background-color: #2563eb;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: top 0.3s ease-in-out;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu-icon {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: block;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #2563eb;
+    text-align: center;
+    display: none;
+}
+
+.nav-links li {
+    padding: 10px 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    display: block;
+    padding: 10px;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20%;
+}
+
+/* Show menu when active */
+.nav-links.active {
+    display: block;
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    padding: 2rem;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 40vw;
+    height: autos;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero-text {
+    margin-top: 20px;
+}
+
+.greeting {
+    font-size: 1.5rem;
+    color: #374151;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 2rem;
+    color: #2563eb;
+    font-weight: 800;
+}
+
+/* ABOUT SECTION */
+#about {
+    height: 60vh;
+    background-color: #2563eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#about .greeting {
+    color: white;
+}
+
+.about-text {
+    margin-top: 5vh;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+}
+
+/* PROJECTS SECTION */
+
+#projects {
+    height: 180vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.grid-container {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.grid-child {
+    position: relative;
+    height: 13rem; 
+    width: 13rem;
+    background-color: white;
+    overflow: hidden;
+    border: 1px solid #2563eb;
+    border-radius: 20px;
+}
+.grid-child img {
+    max-width: 100%;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.card-overlay {
+    height: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    background: #2563eb;
+    opacity: 95%;
+    transition: height 0.5s;
+}
+
+.grid-child:hover img {
+    transform: scale(1.2);
+}
+
+.grid-child:hover .card-overlay {
+    height: 100%;
+}
+
+.card-text {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+/* Desktop View */
+@media (min-width: 768px) {
+
+    /* NAVIGATION BAR */
+    .menu-icon {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        position: static;
+        background: none;
+        width: auto;
+        gap: 2rem;
+    }
+
+    /* HOMEPAGE */
+    .hero {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .hero-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+    .hero-image img {
+        height: 50vh;
+        width: auto;
+    }
+
+    .hero-text {
+        flex: 1;
+    }
+
+    .title {
+        font-size: 3.5rem;
+        color: #2563eb;
+        font-weight: 800;
+    }
+
+    .greeting {
+        font-size: 3rem;
+        color: #374151;
+        font-weight: bold;
+    }
+
+    /* ABOUT */
+
+    #about {
+        flex-direction: column;
+    }
+
+    .about-text {
+        margin-top: 5vh;
+        font-size: 2rem;
+        color: white;
+    }
+    #about .greeting {
+        font-size: 2.5rem;
+    }
+    
+    /* PROJECTS */
+    #projects {
+        height: 120vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .grid-child {
+        height: auto; 
+        width: 20vw;
+    }
+}
