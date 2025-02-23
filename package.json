@@ -1,0 +1,21 @@
+  {
+    "name": "act5_medenilla",
+    "version": "1.0.0",
+    "description": "This is  a project where we use NodeJS server routing.",
+    "main": "routing.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node routing.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/jaysi17/server-routing.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/jaysi17/server-routing/issues"
+    },
+    "homepage": "https://github.com/jaysi17/server-routing#readme"
+  }
