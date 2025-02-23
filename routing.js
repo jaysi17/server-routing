@@ -72,7 +72,9 @@ const server = http.createServer((req, res) => {
         }
     });
 });
+//used process.env.PORT for Railway Hosting
+const port = process.env.PORT || 3000;
 
-server.listen(3000, 'localhost', () => {
-    console.log('Server running at http://localhost:3000/');
+server.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
 });
