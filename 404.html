@@ -5,7 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found</title>
 </head>
+<style>
+    * {
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        background-color: #2563eb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    .wrapper {
+        border: white 3px solid;
+    }
+
+    .medium-text {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .large-text {
+        font-size: 4rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .bottom-text {
+        text-align: center;
+        font-size: 2rem;
+    }
+    /* DESKTOP VIEW */
+    @media (min-width: 768px) {
+        .medium-text {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        .large-text {
+            font-size: 11rem;
+        }
+
+        .bottom-text {
+            font-size: 3rem;
+        }
+    }
+
+</style>
 <body>
-    ERROR404: Page Not Found
+    <div class="wrapper">
+        <div class="medium-text">oops...</div>
+        <div class="large-text">404</div>
+        <div class="bottom-text">Error: Page Not Found</div>
+    </div>
 </body>
 </html>
